@@ -13,6 +13,20 @@
     <header>
         <h1>Watch Store</h1>
     </header>
+    <script>
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+        document.addEventListener("keydown", (event) => {
+  if (
+    event.ctrlKey && (event.key === "u" || event.key === "U") ||
+    event.key === "F12" || // Disable F12
+    (event.ctrlKey && event.shiftKey && event.key === "I") 
+  ) {
+    event.preventDefault();
+  }
+});
+
+    </script>
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
